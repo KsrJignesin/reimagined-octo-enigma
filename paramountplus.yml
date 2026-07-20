@@ -1,0 +1,47 @@
+# Paramount+ Service Configuration
+device_type: androidphone
+
+# License endpoints
+license_widevine: https://cbsi.live.ott.irdeto.com/widevine/getlicense
+license_playready: https://cbsi.live.ott.irdeto.com/playready/rightsmanager.asmx
+
+# Regions configuration
+regions:
+  US:
+    base_url: https://www.paramountplus.com
+    at_token: 'ABAAAAAAAAAAAAAAAAAAAAAAWfnPErrqirt03ZH6JjxMtNqssgFKfspS+x2N9H4ea0g='
+    endpoints:
+      login: 'https://www.paramountplus.com/apps-api/v2.0/androidphone/auth/login.json'
+      status: 'https://www.paramountplus.com/apps-api/v2.0/androidphone/app/status.json'
+      movie: 'https://www.paramountplus.com/apps-api/v3.0/androidphone/movies/{title_id}.json'
+      shows: 'https://www.paramountplus.com/apps-api/v3.0/androidphone/shows/slug/{title}.json'
+      section: 'https://www.paramountplus.com/apps-api/v2.0/androidphone/shows/{showId}/videos/config/{config}.json'
+      seasons: 'https://www.paramountplus.com/apps-api/v2.0/androidphone/videos/section/{section}.json'
+      barrearUrl: 'https://www.paramountplus.com/apps-api/v3.1/xboxone/irdeto-control/anonymous-session-token.json'
+      
+  FR:
+    base_url: https://www.paramountplus.com
+    at_token: 'ABAS/G30Pp6tJuNOlZ1OEE6Rf5goS0KjICkGkBVIapVuxemiiASyWVfW4v7SUeAkogc='
+    endpoints:
+      login: 'https://www.paramountplus.com/apps-api/v2.0/androidphone/auth/login.json'
+      status: 'https://www.paramountplus.com/apps-api/v3.0/androidphone/login/status.json'
+      movie: 'https://www.paramountplus.com/apps-api/v3.0/androidphone/movies/{title_id}.json'
+      shows: 'https://www.paramountplus.com/apps-api/v3.0/androidphone/shows/slug/{title}.json'
+      section: 'https://www.paramountplus.com/apps-api/v2.0/androidphone/shows/{showId}/videos/config/{config}.json'
+      seasons: 'https://www.paramountplus.com/apps-api/v2.0/androidphone/videos/section/{section}.json'
+      barrearUrl: 'https://www.paramountplus.com/apps-api/v3.1/xboxone/irdeto-control/anonymous-session-token.json'
+      
+  INTL:
+    base_url: https://www.intl.paramountplus.com
+    at_token: 'ABAAAAAAAAAAAAAAAAAAAAAAWfnPErrqirt03ZH6JjxMtNqssgFKfspS+x2N9H4ea0g='
+    endpoints:
+      login: 'https://www.intl.paramountplus.com/apps-api/v2.0/androidphone/auth/login.json'
+      status: 'https://www.intl.paramountplus.com/apps-api/v3.0/androidphone/login/status.json'
+      movie: 'https://www.intl.paramountplus.com/apps-api/v3.0/androidphone/movies/{title_id}.json'
+      shows: 'https://www.intl.paramountplus.com/apps-api/v3.0/androidphone/shows/slug/{title}.json'
+      section: 'https://www.intl.paramountplus.com/apps-api/v2.0/androidphone/shows/{showId}/videos/config/{config}.json'
+      seasons: 'https://www.intl.paramountplus.com/apps-api/v2.0/androidphone/videos/section/{section}.json'
+      barrearUrl: 'https://www.intl.paramountplus.com/apps-api/v3.1/xboxone/irdeto-control/session-token.json'
+
+# User agent for requests
+user_agent: 'Paramount+/12.0.70 (com.cbs.ott; build:211264860; Android SDK 29; androidphone; SM-G975W) okhttp/4.10.0'
