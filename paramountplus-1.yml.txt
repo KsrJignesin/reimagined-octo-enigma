@@ -1,0 +1,71 @@
+# Paramount+ Service Configuration
+device_type: androidphone
+
+# License endpoints
+license_widevine: https://cbsi.live.ott.irdeto.com/widevine/getlicense
+license_playready: https://cbsi.live.ott.irdeto.com/playready/rightsmanager.asmx
+license_device_caps: GAAAGA
+
+# User agents
+user_agent: 'Paramount+/16.13.0 (com.cbs.ca; build:420000599; Android SDK 34; androidphone; sdk_gphone64_x86_64) okhttp/5.3.2'
+dalvik_user_agent: 'Dalvik/2.1.0 (Linux; U; Android 14; sdk_gphone64_x86_64 Build/UE1A.230829.050)'
+
+# Device info (used by irdeto session token)
+device:
+  model: sdk_gphone64_x86_64
+  firmware_version: "14"
+  platform: PPINTL_AndroidApp
+  app_version: "16.13.0"
+
+# Streaming settings
+streaming:
+  rows: 30
+  # Asset type target: avc, hevc, hdr, hdr_hevc
+  codec: avc
+
+# Regions configuration
+regions:
+  US:
+    base_url: https://www.paramountplus.com
+    at_token: 'ABAAievdUgiTZimmiIhyXJ+HILcUx9i/F/Sl3sfxqCOnEu2uYimYaBv9yYCg/eUHwP0='
+    endpoints:
+      login: 'https://www.paramountplus.com/apps-api/v2.0/androidphone/auth/login.json'
+      status: 'https://www.paramountplus.com/apps-api/v2.0/androidphone/app/status.json'
+      movie: 'https://www.paramountplus.com/apps-api/v3.0/androidphone/movies/{title_id}.json'
+      shows: 'https://www.paramountplus.com/apps-api/v3.0/androidphone/shows/slug/{title}.json'
+      shows_by_id: 'https://www.paramountplus.com/apps-api/v3.0/androidphone/shows/{title}.json'
+      menu: 'https://www.paramountplus.com/apps-api/v3.0/androidphone/shows/{show_id}/menu.json'
+      section: 'https://www.paramountplus.com/apps-api/v2.0/androidphone/shows/{showId}/videos/config/{config}.json'
+      seasons: 'https://www.paramountplus.com/apps-api/v2.0/androidphone/videos/section/{section}.json'
+      irdeto_session: 'https://www.paramountplus.com/apps-api/v3.3/androidphone/irdeto-control/session-token.json'
+      playability: 'https://www.paramountplus.com/apps-api/v3.0/androidphone/content/playability.json'
+
+  FR:
+    base_url: https://www.paramountplus.com
+    at_token: 'ABAS/G30Pp6tJuNOlZ1OEE6Rf5goS0KjICkGkBVIapVuxemiiASyWVfW4v7SUeAkogc='
+    endpoints:
+      login: 'https://www.paramountplus.com/apps-api/v2.0/androidphone/auth/login.json'
+      status: 'https://www.paramountplus.com/apps-api/v3.0/androidphone/login/status.json'
+      movie: 'https://www.paramountplus.com/apps-api/v3.0/androidphone/movies/{title_id}.json'
+      shows: 'https://www.paramountplus.com/apps-api/v3.0/androidphone/shows/slug/{title}.json'
+      shows_by_id: 'https://www.paramountplus.com/apps-api/v3.0/androidphone/shows/{title}.json'
+      menu: 'https://www.paramountplus.com/apps-api/v3.0/androidphone/shows/{show_id}/menu.json'
+      section: 'https://www.paramountplus.com/apps-api/v2.0/androidphone/shows/{showId}/videos/config/{config}.json'
+      seasons: 'https://www.paramountplus.com/apps-api/v2.0/androidphone/videos/section/{section}.json'
+      irdeto_session: 'https://www.paramountplus.com/apps-api/v3.3/androidphone/irdeto-control/session-token.json'
+      playability: 'https://www.paramountplus.com/apps-api/v3.0/androidphone/content/playability.json'
+
+  INTL:
+    base_url: https://www.intl.paramountplus.com
+    at_token: 'ABDHbpuxpCmi89SIB2cB21q9O6Cnd+SxUQ8Gyjf9D/9JelZuXdGsx5OvBjJwEGpMCVo='
+    endpoints:
+      login: 'https://www.intl.paramountplus.com/apps-api/v2.0/androidphone/auth/login.json'
+      status: 'https://www.intl.paramountplus.com/apps-api/v3.0/androidphone/login/status.json'
+      movie: 'https://www.intl.paramountplus.com/apps-api/v3.0/androidphone/movies/{title_id}.json'
+      shows: 'https://www.intl.paramountplus.com/apps-api/v3.0/androidphone/shows/slug/{title}.json'
+      shows_by_id: 'https://www.intl.paramountplus.com/apps-api/v3.0/androidphone/shows/{title}.json'
+      menu: 'https://www.intl.paramountplus.com/apps-api/v3.0/androidphone/shows/{show_id}/menu.json'
+      section: 'https://www.intl.paramountplus.com/apps-api/v2.0/androidphone/shows/{showId}/videos/config/{config}.json'
+      seasons: 'https://www.intl.paramountplus.com/apps-api/v2.0/androidphone/videos/section/{section}.json'
+      irdeto_session: 'https://www.intl.paramountplus.com/apps-api/v3.3/androidphone/irdeto-control/session-token.json'
+      playability: 'https://www.intl.paramountplus.com/apps-api/v3.0/androidphone/content/playability.json'
